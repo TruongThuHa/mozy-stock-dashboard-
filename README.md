@@ -1,8 +1,8 @@
-# mozy-stock-dashboard-
-Mozy Stock Dashboard is a local dashboard for Vietnam stock watchlists, powered by Mozyfin CLI for real-time quotes and technical indicators. It runs an intraday pipeline every 5 minutes and an end-of-day pipeline where Mozy AI generates buy/hold/sell decisions. Data is stored in SQLite and visualized via Chart
-# Mozy Stock Dashboard
+# SSI-stock-dashboard-
+Mozy Stock Dashboard is a local dashboard for Vietnam stock watchlists, powered by SSIfin CLI for real-time quotes and technical indicators. It runs an intraday pipeline every 5 minutes and an end-of-day pipeline where Mozy AI generates buy/hold/sell decisions. Data is stored in SQLite and visualized via Chart
+# SSI Stock Dashboard
 
-Live local dashboard for VN stock watchlist using [Mozyfin](https://mozy.vn) as data source and Mozy AI for EOD decisions.
+Live local dashboard for VN stock watchlist using [SSI](https://iboard.ssi.com.vn/) as data source and SSI AI for EOD decisions.
 
 ## Prerequisites
 
