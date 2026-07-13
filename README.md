@@ -1,33 +1,31 @@
-# SSI-stock-dashboard-
-SSI Stock Dashboard is a local dashboard for Vietnam stock watchlists, powered by SSIfin CLI for real-time quotes and technical indicators. It runs an intraday pipeline every 5 minutes and an end-of-day pipeline where  AI generates buy/hold/sell decisions. Data is stored in SQLite and visualized via Chart
-# SSI Stock Dashboard
+# Mozy Stock Dashboard
 
-Live local dashboard for VN stock watchlist using [SSI](https://iboard.ssi.com.vn/) as data source and SSI AI for EOD decisions.
+Live local dashboard for VN stock watchlist using [Mozyfin](https://mozy.vn) as data source and Mozy AI for EOD decisions.
 
 ## Prerequisites
 
 - **Node.js** >= 18
-- **SSIfin CLI** — installed and authenticated
+- **Mozyfin CLI** — installed and authenticated
 
-### Setup SSIfin CLI
+### Setup Mozyfin CLI
 
-SSIfin CLI is the data source for this dashboard. It provides real-time quotes, OHLCV, stats, news, TA, and AI-powered analysis for Vietnam stocks.
+Mozyfin CLI is the data source for this dashboard. It provides real-time quotes, OHLCV, stats, news, TA, and AI-powered analysis for Vietnam stocks.
 
 ```bash
-# 1. Install SSIfin CLI globally
+# 1. Install Mozyfin CLI globally
 npm install -g mozyfin-cli
 
-# 2. Get an API key from https://iboard.ssi.com.vn/ and login
-SSIfin login --api-key <YOUR_API_KEY>
+# 2. Get an API key from https://mozy.vn and login
+mozyfin login --api-key <YOUR_API_KEY>
 
-# 3. Or set key as env var (for SSI AI features)
+# 3. Or set key as env var (for Mozy AI features)
 export MOZYFIN_API_KEY=<YOUR_API_KEY>
 
 # 4. Verify it works
-SSIfin quote VCB.VN
+mozyfin quote VCB.VN
 ```
 
-
+See [Mozyfin docs](https://docs.mozy.vn) for full CLI reference.
 
 ## Quick Start
 
@@ -100,11 +98,11 @@ The dashboard includes a Social Posts tab for market sentiment analysis from soc
 ## Architecture
 
 ```
-SSI-stock-dashboard/
+mozy-stock-dashboard/
 ├── server.mjs          # Express server @ 127.0.0.1:7878
 ├── pipeline.mjs        # Data pipeline worker
 ├── db.mjs              # SQLite helpers (better-sqlite3)
-├── mozyfin.mjs         # SSIfin CLI wrapper
+├── mozyfin.mjs         # Mozyfin CLI wrapper
 ├── mozy-ask.mjs        # Mozy AI ask wrapper
 ├── mozyfin-ask.cjs     # Mozy AI agent script
 ├── technicals.mjs      # TA indicators (SMA, RSI, MACD, etc.)
